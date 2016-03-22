@@ -12,6 +12,10 @@
 		1F004AEB1CA11B07001C6D13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F004AE91CA11B07001C6D13 /* Main.storyboard */; };
 		1F004AED1CA11B07001C6D13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F004AEC1CA11B07001C6D13 /* Assets.xcassets */; };
 		1F004AF01CA11B07001C6D13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F004AEE1CA11B07001C6D13 /* LaunchScreen.storyboard */; };
+		1F004AF81CA11B1D001C6D13 /* house.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F004AF71CA11B1D001C6D13 /* house.jpg */; };
+		1F004AFD1CA11B90001C6D13 /* RedGreenFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F004AFC1CA11B90001C6D13 /* RedGreenFilter.swift */; };
+		1F004B001CA12589001C6D13 /* Kernel.kernel in Resources */ = {isa = PBXBuildFile; fileRef = 1F004AFF1CA12589001C6D13 /* Kernel.kernel */; };
+		1F004B021CA12703001C6D13 /* InvertFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F004B011CA12703001C6D13 /* InvertFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		1F004AEC1CA11B07001C6D13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F004AEF1CA11B07001C6D13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F004AF11CA11B07001C6D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F004AF71CA11B1D001C6D13 /* house.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = house.jpg; sourceTree = "<group>"; };
+		1F004AFC1CA11B90001C6D13 /* RedGreenFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RedGreenFilter.swift; path = Filters/RedGreenFilter.swift; sourceTree = "<group>"; };
+		1F004AFF1CA12589001C6D13 /* Kernel.kernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Kernel.kernel; path = Filters/Kernel.kernel; sourceTree = "<group>"; };
+		1F004B011CA12703001C6D13 /* InvertFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InvertFilter.swift; path = Filters/InvertFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		1F004AE41CA11B07001C6D13 /* Learning Core Image */ = {
 			isa = PBXGroup;
 			children = (
+				1F004AFB1CA11B59001C6D13 /* Filters */,
+				1F004AFE1CA1242B001C6D13 /* App */,
+				1F004AF91CA11B24001C6D13 /* Supporting Files */,
+			);
+			path = "Learning Core Image";
+			sourceTree = "<group>";
+		};
+		1F004AF91CA11B24001C6D13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				1F004AE51CA11B07001C6D13 /* AppDelegate.swift */,
-				1F004AE71CA11B07001C6D13 /* ViewController.swift */,
 				1F004AE91CA11B07001C6D13 /* Main.storyboard */,
 				1F004AEC1CA11B07001C6D13 /* Assets.xcassets */,
 				1F004AEE1CA11B07001C6D13 /* LaunchScreen.storyboard */,
+				1F004AF71CA11B1D001C6D13 /* house.jpg */,
 				1F004AF11CA11B07001C6D13 /* Info.plist */,
 			);
-			path = "Learning Core Image";
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F004AFB1CA11B59001C6D13 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				1F004AFC1CA11B90001C6D13 /* RedGreenFilter.swift */,
+				1F004B011CA12703001C6D13 /* InvertFilter.swift */,
+				1F004AFF1CA12589001C6D13 /* Kernel.kernel */,
+			);
+			name = Filters;
+			sourceTree = "<group>";
+		};
+		1F004AFE1CA1242B001C6D13 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1F004AE71CA11B07001C6D13 /* ViewController.swift */,
+			);
+			name = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +158,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F004AF81CA11B1D001C6D13 /* house.jpg in Resources */,
 				1F004AF01CA11B07001C6D13 /* LaunchScreen.storyboard in Resources */,
 				1F004AED1CA11B07001C6D13 /* Assets.xcassets in Resources */,
+				1F004B001CA12589001C6D13 /* Kernel.kernel in Resources */,
 				1F004AEB1CA11B07001C6D13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F004AFD1CA11B90001C6D13 /* RedGreenFilter.swift in Sources */,
 				1F004AE81CA11B07001C6D13 /* ViewController.swift in Sources */,
 				1F004AE61CA11B07001C6D13 /* AppDelegate.swift in Sources */,
+				1F004B021CA12703001C6D13 /* InvertFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

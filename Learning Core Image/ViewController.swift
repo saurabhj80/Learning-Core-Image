@@ -7,19 +7,39 @@
 //
 
 import UIKit
+import CoreImage
 
 class ViewController: UIViewController {
 
+    // CIContext is used for creating images
+    private var context = CIContext()
+    
+    // for rendering the UIImage
+    @IBOutlet weak var imageView: UIImageView!
+    
+    // the input image
+    private var inputImage: CIImage? {
+        get {
+            if let url = NSBundle.mainBundle().URLForResource("house", withExtension: "jpg") {
+                return CIImage(contentsOfURL: url)
+            }
+            return nil
+        }
+    }
+    
+    // MARK:- View Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // filter the image
+        guard let ci = inputImage else { return }
+        let filter = InvertFilter(image: ci)
+        if let filteredImage = filter.outputImage {
+            let img = context.createCGImage(filteredImage, fromRect: filteredImage.extent)
+            self.imageView?.image = UIImage(CGImage: img)
+        }
+
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
